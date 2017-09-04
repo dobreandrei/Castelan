@@ -1,0 +1,321 @@
+body {
+  background-image: url(../img/stressed_linen.png); }
+
+#toTopBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #a64452;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 25px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-weight: bold; }
+  #toTopBtn:hover {
+    background-color: #CAAF57;
+    /* Add a dark-grey background on hover */ }
+  @media screen and (max-width: 625px) {
+    #toTopBtn {
+      padding: 10px;
+      bottom: 140px; } }
+
+/*-----------------------------------------------------------------------Navigation------------------------------------------*/
+.menu-section {
+  margin-top: 0;
+  width: 100%; }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #a64452; }
+  @media screen and (max-width: 535px) {
+    nav ul {
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch; } }
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .8em 1em;
+    font-size: 1.5em; }
+    @media screen and (max-width: 625px) {
+      nav ul li a {
+        font-size: 1.2em;
+        padding: 1em 0.9em; } }
+    nav ul li a:hover {
+      background: #CAAF57; }
+
+.logo:hover {
+  background: none; }
+
+@media screen and (max-width: 535px) {
+  #logo_item {
+    order: -1;
+    width: 50%; } }
+
+/*------------------------------------------------------------------------------------------Parallax-----------------*/
+.parallax {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+#para1 {
+  background-image: url("../img/corvin_para3.jpg");
+  min-height: 600px; }
+
+#para2 {
+  background-image: url("../img/101.jpg");
+  min-height: 500px; }
+
+#para3 {
+  background-image: url("../img/bran_para.jpg");
+  min-height: 600px; }
+
+.para_section {
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #CAAF57;
+  color: #f9f9f9; }
+  .para_section h2 {
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .para_section a {
+    color: #f9f9f9;
+    text-decoration: none; }
+    .para_section a:hover {
+      text-decoration: underline; }
+  .para_section:nth-of-type(3) {
+    background-color: #a64452; }
+
+/*Footer------------------------------------------------------------------------------------------------------------------*/
+footer {
+  width: 100%;
+  background-color: #a64452;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  footer ul {
+    list-style: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 15px;
+    margin: auto; }
+    @media screen and (max-width: 768px) {
+      footer ul {
+        font-size: 1em; } }
+  footer li {
+    display: inline-block;
+    padding: 0.5em; }
+  footer a {
+    color: #f9f9f9;
+    text-decoration: none; }
+    footer a:hover {
+      color: #CAAF57; }
+
+.social_icons {
+  font-size: 48px; }
+  .social_icons li {
+    padding-left: 20px;
+    padding-top: 0; }
+  @media screen and (max-width: 768px) {
+    .social_icons {
+      font-size: 32px; }
+      .social_icons li {
+        padding-left: 10px; } }
+
+/*..................................................................................................Castle List*/
+.large_container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.gallery_item {
+  padding: 10px;
+  height: 225px;
+  width: 400px;
+  position: relative; }
+  .gallery_item img {
+    border-radius: 7px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+    border: 2px solid #CAAF57; }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+.gallery_item:hover .middle {
+  opacity: 1; }
+
+/*.gallery_item:hover img {
+    
+    filter: blur(3px);
+   
+}*/
+.item_text {
+  background-color: #a64452;
+  font-size: 1.5em;
+  padding: 16px 42px;
+  font-weight: bold;
+  border-radius: 7px;
+  text-align: center; }
+  .item_text a {
+    color: #f9f9f9;
+    text-decoration: none; }
+
+/*---------------------------------------------------------Castle Pages---------------------------------------------------*/
+.page_wrapper {
+  width: 85%;
+  margin: 0 auto;
+  background-color: none;
+  margin-top: 40px; }
+
+.banner_image {
+  margin: 0 auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; }
+
+article {
+  background-color: #CAAF57;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: justify;
+  text-indent: 25px;
+  margin: 0 auto; }
+  @media screen and (max-width: 766px) {
+    article {
+      font-size: 0.8em; } }
+  @media screen and (max-width: 1024px) {
+    article {
+      width: 80%; } }
+  article h2 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.6em; }
+
+.article_img {
+  float: right;
+  max-width: 400px;
+  border-radius: 7px;
+  box-shadow: 2px 0px 11px -3px rgba(0, 0, 0, 0.56);
+  margin: 20px;
+  border: 3px solid #a64452; }
+  @media screen and (max-width: 766px) {
+    .article_img {
+      clear: both;
+      margin: 0 auto; } }
+
+#map {
+  height: 300px;
+  width: 42%;
+  margin: 20px;
+  float: right;
+  border-radius: 10px;
+  border: 3px solid #a64452; }
+  @media screen and (max-width: 766px) {
+    #map {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+      height: 230px;
+      width: 230px;
+      padding: 10px; } }
+
+/*-----------------------------------------------------------------------------------------------------------Svg Map*/
+#harta {
+  display: block;
+  margin: auto; }
+
+.map-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #CAAF57;
+  background-image: url(../img/mapbg2.png);
+  background-position: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 7px; }
+  @media screen and (max-width: 625px) {
+    .map-wrapper {
+      width: 90%; } }
+
+path:hover, circle:hover {
+  stroke: #a64452 !important;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  fill: #a64452 !important;
+  cursor: pointer; }
+
+.location_div {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .location_div img {
+    border: 3px solid #434343; }
+
+.location_wrapper {
+  text-align: center;
+  color: #434343;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  background-color: #CAAF57;
+  border-radius: 10px; }
+  .location_wrapper h2 {
+    border-bottom: 4px dashed #434343;
+    font-size: 1.8em; }
+  @media screen and (max-width: 768px) {
+    .location_wrapper {
+      width: 90%; } }
+
+/*# sourceMappingURL=main_style.css.map */

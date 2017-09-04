@@ -1,0 +1,504 @@
+
+$mainred: #a64452;
+$darkness: #434343;
+$mellowyellow: #CAAF57;
+
+
+
+body {
+background-image: url(../img/stressed_linen.png);
+
+}
+
+
+
+ 
+
+#toTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: $mainred; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 25px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-weight: bold;
+    
+    &:hover {
+    background-color: $mellowyellow; /* Add a dark-grey background on hover */
+}
+    
+@media screen and (max-width: 625px){
+    
+    padding: 10px;
+    bottom: 140px;
+    
+} 
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------Navigation------------------------------------------*/
+.menu-section {
+   
+	
+	
+	margin-top:0;
+        width: 100%;
+     
+        
+}
+
+nav {
+    
+
+    ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+        display: flex; 
+       
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        background-color:$mainred;
+        @media screen and (max-width:535px){
+            
+           height:auto;
+           flex-direction:column;
+           justify-content:flex-start;
+           align-items: stretch;
+        }
+        
+        
+        li {
+           
+            a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: .8em 1em;
+            font-size: 1.5em;
+         
+        
+            @media screen and (max-width: 625px){
+                
+                font-size:1.2em;
+                padding:1em 0.9em;
+                
+            }
+            @media screen and (max-width:535px){
+               
+            }
+            
+             &:hover {
+            
+                background: $mellowyellow;
+                     }
+        
+                }
+                
+            }  
+        }
+}
+
+.logo{
+
+&:hover {
+    
+    background:none;
+    
+}
+}
+
+#logo_item
+{ 
+    @media screen and (max-width:535px){
+     order: -1;
+     width:50%;
+ }
+
+}
+
+/*------------------------------------------------------------------------------------------Parallax-----------------*/
+
+
+.parallax{
+ position:relative;
+
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+ 
+
+}
+
+#para1{
+  background-image:url('../img/corvin_para3.jpg');
+  min-height:600px;
+
+}
+
+#para2{
+  background-image:url('../img/101.jpg');
+  min-height:500px;
+}
+
+#para3{
+  background-image:url('../img/bran_para.jpg');
+  min-height:600px;
+}
+
+.para_section {
+  text-align:center;
+  padding:20px 20px;
+  font-size:1.1em;
+  font-weight:bold;
+  border: 1px solid #ccc;
+  background-color: $mellowyellow;
+  color: #f9f9f9;
+  
+  h2 {
+      
+      font-size: 42px;
+     margin-top:10px;
+     margin-bottom:10px;
+  }
+  
+    a {
+      
+      color:#f9f9f9;
+      text-decoration: none;
+      
+      &:hover {
+          text-decoration: underline;
+      }
+        }
+  
+  &:nth-of-type(3){
+      background-color: $mainred;
+  }
+}
+
+
+
+
+/*Footer------------------------------------------------------------------------------------------------------------------*/
+
+
+footer {
+  
+    width:100%;
+    background-color: $mainred;
+    
+    display: flex; 
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    
+   
+
+    ul {
+        list-style: none;
+        font-size: 1.3em;
+        font-weight: bold;
+        padding-top: 15px;
+       margin:auto;
+       
+       @media screen and (max-width:768px){ 
+       font-size: 1em;
+       
+       }
+       
+     
+    }
+    
+    li {
+        display: inline-block;
+        padding: 0.5em;
+        
+  
+        
+    }
+    a {
+        color: #f9f9f9;
+        text-decoration: none;
+        
+        &:hover {
+            
+            color: $mellowyellow;
+        }
+    }
+   
+  
+}
+
+.social_icons {
+    
+    font-size: 48px;
+   
+    li {
+        padding-left: 20px;
+       padding-top: 0;
+    }
+    
+    @media screen and (max-width:768px){
+        
+        font-size: 32px;
+        
+        li {
+            padding-left: 10px;
+           
+        }
+    }
+   
+}
+
+/*..................................................................................................Castle List*/
+
+.large_container {
+    
+    padding-top: 25px;
+    padding-bottom:25px;
+  
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery_item {
+    
+    padding: 10px;
+    height:225px;
+    width: 400px;
+    position:relative;
+    
+    img {
+        
+        border-radius: 7px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        opacity:1;
+        border: 2px solid $mellowyellow;
+        
+    }
+
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+
+.gallery_item:hover .middle {
+  opacity: 1;
+ 
+}
+
+/*.gallery_item:hover img {
+    
+    filter: blur(3px);
+   
+}*/
+
+.item_text {
+  background-color: $mainred;
+  font-size: 1.5em;
+  padding: 16px 42px;
+  font-weight:bold;
+  border-radius: 7px;
+  text-align:center;
+  a {
+      
+      color: #f9f9f9;
+      text-decoration:none;
+  }
+  
+}
+
+/*---------------------------------------------------------Castle Pages---------------------------------------------------*/
+
+.page_wrapper {
+    
+    width: 85%;
+    margin: 0 auto;
+    background-color: none;
+    margin-top: 40px;
+
+  
+}
+
+.banner_image {
+    
+
+margin: 0 auto;
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+}
+
+article {
+ background-color: $mellowyellow;    
+ 
+margin-top: 20px;
+font-size: 1.1em;
+font-weight: bold;
+padding-left: 10%;
+padding-right: 10%;
+padding-top: 30px;
+padding-bottom: 20px;
+text-align: justify;
+text-indent: 25px;
+margin: 0 auto;
+
+
+@media screen and (max-width:766px) {
+    
+font-size: 0.8em;
+
+}
+
+
+@media screen and (max-width: 1024px){
+    
+    width: 80%;
+}
+   
+   h2 {
+       
+       text-align:center;
+      padding: 20px 0;
+      font-size: 1.6em;
+   }
+}
+
+.article_img {
+    
+    
+    float: right;
+    max-width: 400px;
+    border-radius: 7px;
+    box-shadow: 2px 0px 11px -3px rgba(0,0,0,0.56);
+    margin: 20px;
+    border: 3px solid $mainred;
+    @media screen and (max-width:766px) {
+        
+        clear:both;
+        margin: 0 auto;
+    }
+     
+    }
+    
+    
+   #map {
+   
+  
+   height: 300px;
+   width: 42%;
+  margin: 20px;
+  float: right;
+  border-radius: 10px;
+  border: 3px solid $mainred;
+  
+  @media screen and (max-width:766px) {
+        
+       float: none;
+       clear:both;
+        margin: 0 auto;
+        height: 230px;
+        width: 230px;
+        padding: 10px;
+    }
+
+ } 
+
+
+/*-----------------------------------------------------------------------------------------------------------Svg Map*/
+
+
+#harta {
+    
+    display:block;
+    margin:auto;
+}
+
+.map-wrapper {
+    
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: $mellowyellow;
+    background-image:url(../img/mapbg2.png);
+    background-position: center;
+    margin-top: 30px;
+    margin-bottom:30px;
+    border-radius: 7px;
+    
+    @media screen and (max-width: 625px){
+        width: 90%;}
+}
+
+path:hover, circle:hover {
+  stroke: $mainred !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: $mainred  !important;
+  cursor: pointer;
+}
+
+ 
+.location_div {
+    
+   
+margin: 0 auto;
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+
+img {
+    
+    border: 3px solid $darkness;
+}
+   
+}
+
+.location_wrapper {
+text-align:center;
+color: $darkness;
+
+width: 70%; 
+margin: 0 auto;
+padding-top: 15px;
+padding-bottom: 20px;
+margin-bottom: 30px;
+background-color: $mellowyellow;
+border-radius: 10px;
+
+h2 {
+    
+    border-bottom: 4px dashed $darkness;
+    font-size: 1.8em;
+}
+
+@media screen and (max-width:768px){
+width: 90%;
+}
+}
